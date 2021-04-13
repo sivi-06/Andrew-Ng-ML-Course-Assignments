@@ -22,7 +22,7 @@ X = [ones(m, 1) X];
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
-k=sigmoid(X*Theta1');
+k=sigmoid(Theta1'*X);
 s = size(k, 1);
 k = [ones(s, 1) k];
 next = sigmoid(k*Theta2');
